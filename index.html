@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | up4all-project</title>
+    <title>Up4all</title>
   </head>
   <body style="text-align: center">
-    <canvas id="unity-canvas" width=1024 height=576 style="width: 1024px; height: 576px; background: #231F20"></canvas>
+    <canvas id="unity-canvas" width=1024 height=576 style="width: 100%; height: 100%; background: #231F20"></canvas>
     <script src="Build/up4all-project.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
@@ -18,12 +18,12 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/dccb762e6d8bec2fa27fbeb182ddae0b.data.gz",
-        frameworkUrl: "Build/07e9be1e3333d3769d7f697d1f2d493e.js.gz",
-        codeUrl: "Build/f3041d556c45d9e16c8d0baa641753ba.wasm.gz",
+        dataUrl: "Build/up4all-project.data.gz",
+        frameworkUrl: "Build/up4all-project.framework.js.gz",
+        codeUrl: "Build/up4all-project.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Vaizard Games",
-        productName: "up4all-project",
+        productName: "up4all",
         productVersion: "0.0.1",
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
