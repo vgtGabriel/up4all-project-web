@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Up4all</title>
+    <title>Unity WebGL Player | up4all</title>
   </head>
   <body style="text-align: center">
-    <canvas id="unity-canvas" width=1024 height=576 style="width: 100%; height: 100%; background: #231F20"></canvas>
+    <canvas id="unity-canvas" width=1024 height=576 style="width: 1024px; height: 576px; background: #231F20"></canvas>
     <script src="Build/up4all-project.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
@@ -18,9 +18,9 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/up4all-project.data.gz",
-        frameworkUrl: "Build/up4all-project.framework.js.gz",
-        codeUrl: "Build/up4all-project.wasm.gz",
+        dataUrl: "Build/up4all-project.data",
+        frameworkUrl: "Build/up4all-project.framework.js",
+        codeUrl: "Build/up4all-project.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Vaizard Games",
         productName: "up4all",
