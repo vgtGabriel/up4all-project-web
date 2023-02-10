@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Up4all</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <title>Up 4 All</title>
+    <link rel="shortcut icon" href="TemplateData/icon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
-  <body style="overflow: hidden;">
+  <body>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=1024 height=576></canvas>
       <div id="unity-loading-bar">
@@ -16,21 +16,18 @@
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
-      <div id="unity-warning"> </div>
-      <!-- <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
+      <!-- <div id="unity-warning"> </div> -->
+      <div id="unity-footer">
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">up4all</div>
-      </div> -->
+      </div>
     </div>
-    <div id="unity-fullscreen-button"></div>
     <script>
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      var warningBanner = document.querySelector("#unity-warning");
+      // var warningBanner = document.querySelector("#unity-warning");
 
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
@@ -38,35 +35,35 @@
       // Modify or remove this function to customize the visually presented
       // way that non-critical warnings and error messages are presented to the
       // user.
-      function unityShowBanner(msg, type) {
-        function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-        }
-        var div = document.createElement('div');
-        div.innerHTML = msg;
-        warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
-            warningBanner.removeChild(div);
-            updateBannerVisibility();
-          }, 5000);
-        }
-        updateBannerVisibility();
-      }
+      // function unityShowBanner(msg, type) {
+      //   function updateBannerVisibility() {
+      //     warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+      //   }
+      //   var div = document.createElement('div');
+      //   div.innerHTML = msg;
+      //   warningBanner.appendChild(div);
+      //   if (type == 'error') div.style = 'background: red; padding: 10px;';
+      //   else {
+      //     if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+      //     setTimeout(function() {
+      //       warningBanner.removeChild(div);
+      //       updateBannerVisibility();
+      //     }, 5000);
+      //   }
+      //   updateBannerVisibility();
+      // }
 
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/up4all-project-web.loader.js";
       var config = {
-        dataUrl: buildUrl + "/up4all-project-web.data",
-        frameworkUrl: buildUrl + "/up4all-project-web.framework.js",
-        codeUrl: buildUrl + "/up4all-project-web.wasm",
+        dataUrl: buildUrl + "/8b6cd0616eed7436e261098d2ffdc05a.data",
+        frameworkUrl: buildUrl + "/a965d3257237707d9525f9359beef4b3.js",
+        codeUrl: buildUrl + "/96256ee2d609aa965de3a8c5f495f57f.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "Vaizard Games",
+        companyName: "vaizardgames",
         productName: "up4all",
-        productVersion: "0.0.1",
-        showBanner: unityShowBanner,
+        productVersion: "0.0.2",
+        // showBanner: unityShowBanner,
       };
 
       // By default Unity keeps WebGL canvas render target size matched with
@@ -95,10 +92,9 @@
         unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = window.innerWidth + 'px';
-        canvas.style.height = window.innerHeight + 'px';
-        // canvas.style.width = "1280";
-        // canvas.style.height = "720px";
+
+        canvas.style.width = "1024px";
+        canvas.style.height = "576px";
       }
 
       loadingBar.style.display = "block";
