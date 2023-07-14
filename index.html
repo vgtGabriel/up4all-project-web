@@ -26,13 +26,13 @@
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      
+
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/up4all-project-web.loader.js";
       var config = {
-        dataUrl: buildUrl + "/up4all-project-web.data.unityweb",
-        frameworkUrl: buildUrl + "/up4all-project-web.framework.js.unityweb",
-        codeUrl: buildUrl + "/up4all-project-web.wasm.unityweb",
+        dataUrl: buildUrl + "/up4all-project-web.data",
+        frameworkUrl: buildUrl + "/up4all-project-web.framework.js",
+        codeUrl: buildUrl + "/up4all-project-web.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Vaizard Games",
         productName: "Up 4 All",
@@ -55,7 +55,6 @@
         document.getElementsByTagName('head')[0].appendChild(meta);
         container.className = "unity-mobile";
         canvas.className = "unity-mobile";
-
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
