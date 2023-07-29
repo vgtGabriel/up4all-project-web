@@ -138,7 +138,6 @@
     <type fullname="InfoImgBool" preserve="nothing" serialized="true" />
     <type fullname="InfoTxtBool" preserve="nothing" serialized="true" />
     <type fullname="InfoTxtImg" preserve="nothing" serialized="true" />
-    <type fullname="InventoryData" preserve="nothing" serialized="true" />
     <type fullname="Matter" preserve="nothing" serialized="true" />
     <type fullname="MatterData" preserve="nothing" serialized="true" />
     <type fullname="Option2" preserve="nothing" serialized="true" />
