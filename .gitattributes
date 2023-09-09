@@ -1,1 +1,2 @@
 *.data filter=lfs diff=lfs merge=lfs -text
+Build/up4all-project-web.data.unityweb filter=lfs diff=lfs merge=lfs -text
